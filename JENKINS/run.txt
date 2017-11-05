@@ -1,0 +1,10 @@
+#Building images
+#docker build -t <IMAGE-NAME> <DOCKFILE-FOLDER>
+docker build -t aphp-jenkinsdata-image  ./JENKINS/jenkins-data/.
+docker build -t aphp-jenkinsmaster-image  ./JENKINS/jenkins-master/.
+
+#Running docker data container
+docker run --name=aphp-jenkinsdata aphp-jenkinsdata-image 
+
+#Running docker master jenkins
+docker run -p 8080:8080 -p 50000:50000 --name=aphp-jenkinsmaster --volumes-from=aphp-jenkinsdata -d aphp-jenkinsmaster-image
