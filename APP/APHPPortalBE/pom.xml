@@ -3,11 +3,13 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>fr.aphp.portal</groupId>
+
 	<artifactId>APHPPortalBE</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>APHPPortalBE</name>
+
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -21,7 +23,9 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+
         <docker.image.prefix>aphpportalimage</docker.image.prefix>
+
 	</properties>
 
 	<dependencies>
@@ -62,6 +66,7 @@
 					<dockerDirectory>src/main/docker</dockerDirectory>
 					<dockerHost>https://192.168.99.100:2376</dockerHost>
 
+
 					<!--overwrite tags every time image is built with docker:build -->
 					<forceTags>true</forceTags>
 					<imageTags>
@@ -74,9 +79,11 @@
 					<registryUrl>https://hub.docker.com/</registryUrl>
 					<resources>
 						<resource>
+
 							<targetPath>/</targetPath>
 							<directory>${project.build.directory}</directory>
 							<include>${project.build.finalName}.jar</include>
+
 						</resource>
 					</resources>
 				</configuration>
