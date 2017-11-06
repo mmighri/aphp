@@ -25,7 +25,7 @@
 		<java.version>1.8</java.version>
 
         <docker.image.prefix>aphpportalimage</docker.image.prefix>
-		<docker.host>https://192.168.99.100:2376</docker.host>
+		<docker.host>https://192.168.99.100</docker.host>
 		<docker.host.port>2376</docker.host.port>
 	</properties>
 
