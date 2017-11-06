@@ -67,7 +67,7 @@
 					<dockerDirectory>src/main/docker</dockerDirectory>
 					<dockerHost>${docker.host}:${docker.host.port}</dockerHost>
 
-
+					<dockerCertPath>src/main/certs</dockerCertPath>
 					<!--overwrite tags every time image is built with docker:build -->
 					<forceTags>true</forceTags>
 					<imageTags>
